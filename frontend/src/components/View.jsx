@@ -41,7 +41,7 @@ const View = () => {
 
 
         <div >
-        <div className="container">
+        <div className="container-dict">
             {/* product */}
             <div className="product-content product-wrap clearfix product-deatil">
                 <div className="row">
