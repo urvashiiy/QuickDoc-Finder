@@ -29,19 +29,7 @@ const DoctorListing = () => {
         if (loading) return <p>Loading...</p>;
         if (error) return <p>Error: {error}</p>;
         return doctors.map((item) => (
-            <div key={item.id} className="col-md-4 mb-3">
-                {/*<div className="card p-3 bg-light text-dark">
-                    <h3 className='mt-3'>Name{item.name}</h3>
-                    <p>{item.email}</p>
-                    <p>{item.experience} years of experience</p>
-                    <p>{item.speciality}</p>
-                    <p>{item.desc}</p>
-                    <img src={"http://localhost:3000/" + item.image} alt="img" style={{ height: '170px', width: '250px' }} />
-
-                    <img src={"http://localhost:3000/" + item.cer1} alt="img" style={{ height: '170px', width: '250px' }} />
-                    <img src={"http://localhost:3000/" + item.cer2} alt="img" style={{ height: '170px', width: '250px' }} />
-                    <Link to={`/View/${item._id}`} ><button className='btn btn-primary'>View</button></Link>
-                </div>*/}
+            <div className="col-md-4 mb-3">
                 <body className='bodylisting'>
                     <div class="cardListing">
                         <div class="img-avatar">
@@ -54,23 +42,23 @@ const DoctorListing = () => {
                             </svg>
                         </div>
                         <div class="cardListing-text">
-                            <div class="portada">
+                            <div className="portada">
 
                             </div>
-                            <div class="title-total">
-                                <div class="title-listing"></div>
+                            <div className="title-total">
+                                <div className="title-listing"></div>
                                 <h2 className='m-3'>{item.name}</h2>
 
-                                <div class="desc" >{item.desc}</div>
-                               
-                                <div class="actions">
-                                <Link to={`/View/${item._id}`} ><button className=' buton btn btn-primary'>View</button></Link>
+                                <div className="desc" >{item.desc}</div>
+
+                                <div className="actions">
+                                    <Link to={`/View/${item._id}`} ><button className=' buton btn btn-primary'>View</button></Link>
                                     <button className='buttonlisting '><i class="fa-solid fa-hospital-user"></i></button>
                                     <button className='buttonlisting '><i class="fa-solid fa-heart"></i></button>
                                     <button className='buttonlisting'><i class="fa-solid fa-user-doctor"></i></button>
 
                                 </div>
-                               
+
                             </div>
 
                         </div>
@@ -81,13 +69,13 @@ const DoctorListing = () => {
     };
 
     // Inside displayDoctors function
-    return doctors.map((item) => (
+    return (
 
+        <div>
+            <div className='row mt-5 p-5'>{displayDoctors()}</div>
+        </div>
 
-        <div className='row mt-5 p-5'>{displayDoctors()}</div>
-
-    ));
-
+    )
 };
 
 export default DoctorListing;

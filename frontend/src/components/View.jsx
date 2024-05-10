@@ -24,24 +24,11 @@ const View = () => {
         fetchDoctors();
     }, [id]);
 
+
     return (
-        {/* <div>
-            <h2 className='heading' style={{ color: 'green', textAlign: 'center', margin: '3%' }}>Doctor Details</h2>
-            <p>{doctors.name}</p>
-            <p>{doctors.email}</p>
-            <p>{doctors.experience} years of experience</p>
-            <p>{doctors.speciality}</p>
-            <p>{doctors.desc}</p>
-            <img src={"http://localhost:3000/" + doctors.image} alt="img" style={{ height: '170px', width: '250px' }} />
-            <img src={"http://localhost:3000/" + doctors.cer1} alt="img" style={{ height: '170px', width: '250px' }} />
-            <img src={"http://localhost:3000/" + doctors.cer2} alt="img" style={{ height: '170px', width: '250px' }} />
-
-            <Link to="/">Back to Home</Link>
-    </div>*/}
-
-
+   
         <div >
-        <div className="container">
+        <div className="container-dict">
             {/* product */}
             <div className="product-content product-wrap clearfix product-deatil">
                 <div className="row">
@@ -357,12 +344,15 @@ const View = () => {
             </div>
             {/* end product */}
         </div>
+        </div>
        
 
 
 
 
     )
+
 }
+
 
 export default View;
