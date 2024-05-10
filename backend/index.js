@@ -5,7 +5,9 @@ const cors = require('cors')
 
 
 const userRouter = require('./Routers/User');
-const doctorRouter = require('./Routers/AddDoctor')
+const doctorRouter = require('./Routers/AddDoctor');
+const contactRouter = require('./Routers/Contact');
+const UtilRouter = require('./Routers/Utils');
 
 
 
@@ -17,10 +19,13 @@ app.use(cors({
 }))
 
 app.use('/user',userRouter);
-app.use('/doctors',doctorRouter);
+app.use('/doctor',doctorRouter);
+app.use('/contact',contactRouter);
+app.use('/contact',contactRouter);
+app.use('/util',UtilRouter);
 
 
-
+app.use(express.static('./Uploads'))
 
 app.listen(port,() =>{
     console.log(`Server is running on port ${port}`);

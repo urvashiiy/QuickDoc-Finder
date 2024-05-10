@@ -1,116 +1,119 @@
 import React from 'react'
-
 import {useFormik} from 'formik'
-import * as Yup from 'yup'
+
 import { enqueueSnackbar } from 'notistack'
 
-const ContactSchema = Yup.object().shape({
-    name: Yup.string()
-    .required('name is required')
-    .min(3,'Name must be 3 charachters')
-    .max(15,'Name must be 15 charachters'),
-    email:Yup.string()
-    .required('Email is required')
-    .email('Email is invalid'),
-    password: Yup.string()
-    .required('Password is required')
-    .min(8, 'Password must at least 6 charachters')
-    .max(15, 'Password must at most 15 charachters')
-})
 
 
 const Contact = () => {
-  // step 1. formik initialization
-  const ContactForm = useFormik({
+
+  const contactFrom = useFormik({
     initialValues:{
         name:'',
         email:'',
-        password:''
+        message:''
     },
-    //step 5. Valdidation schema
-    onSubmit:(values,{resetForm}) =>{
-        console.log(values)
-        resetForm()
-        enqueueSnackbar('Signup Successfully',{variant:'success'})
+    onSubmit: async(values,action) =>{
+      console.log(values);
+      const res = await fetch('http://localhost:3000/contact/add',{
+          method: 'POST',
+          body: JSON.stringify(values),
+          headers : {
+              'Content-Type': 'application/json'
+          }
+      });
+      console.log(res.status)
+        action.resetForm()
+
+        if (res.status)
+        action.resetForm()
+    if (res.status === 200){
+        enqueueSnackbar(' Successfull',{variant: 'success'})
+    } else{
+        enqueueSnackbar('Failed',{variant: 'error'})
+    }
     },
-    validationSchema: ContactSchema
-})
+  })
+
   return (
-    <div><div className="background">
-    <div className="container">
-      <div className="screen">
-        <div className="screen-header">
-          <div className="screen-header-left">
-            <div className="screen-header-button close" />
-            <div className="screen-header-button maximize" />
-            <div className="screen-header-button minimize" />
-          </div>
-          <div className="screen-header-right">
-            <div className="screen-header-ellipsis" />
-            <div className="screen-header-ellipsis" />
-            <div className="screen-header-ellipsis" />
-          </div>
+    <div className='*'> 
+    <div className="contact-container">
+    <div className="contact-inner-container">
+      <div className="contact-info-container">
+        <h1 className="contact-heading">Contact Us</h1>
+        <p className="contact-description">
+          We're open for any suggestion or just to have a chat.
+        </p>
+        <div className="line" />
+        <div className="contact-details">
+          <h3>
+            <i className="fa fa-map-maker" /> Address
+          </h3>
+          <p>198 Balistreri Extension Apt. 678, New Jersey, USA-328135</p>
         </div>
-        <div className="screen-body">
-          <div className="screen-body-item left">
-            <div className="app-title">
-              <span>CONTACT</span>
-              <span>US</span>
-            </div>
-            <div className="app-contact">CONTACT INFO : +62 81 314 928 595</div>
-          </div>
-          <div className="screen-body-item">
-            <div className="app-form">
-              <div className="app-form-group">
-                <input
-                  className="app-form-control"
-                  placeholder="NAME"
-                  defaultValue="Krisantus Wanandi"
-                />
-              </div>
-              <div className="app-form-group">
-                <input className="app-form-control" placeholder="EMAIL" />
-              </div>
-              <div className="app-form-group">
-                <input className="app-form-control" placeholder="CONTACT NO" />
-              </div>
-              <div className="app-form-group message">
-                <input className="app-form-control" placeholder="MESSAGE" />
-              </div>
-              <div className="app-form-group buttons">
-                <button className="app-form-button">CANCEL</button>
-                <button className="app-form-button">SEND</button>
-              </div>
-            </div>
-          </div>
+        <hr />
+        <div className="contact-details">
+          <h3>
+            <i className="fa fa-envelope" /> Email
+          </h3>
+          <p>contactus@mail.com</p>
+        </div>
+        <hr />
+        <div className="contact-details">
+          <h3>
+            <i className="fa fa-phone" /> Lets Talk
+          </h3>
+          <p>+91 9876543210</p>
+        </div>
+        <hr />
+        <div className="social-link-container">
+          <i className="fa fa-instagram" />
+          <i className="fa fa-facebook" />
+          <i className="fa fa-twitter" />
+          <i className="fa fa-linkedin" />
         </div>
       </div>
-      <div className="credits">
-        Write your feedback
-        <a
-          className="credits-link"
-          href="https://dribbble.com/shots/2666271-Contact"
-          target="_blank"
-        >
-          <svg className="dribbble" viewBox="0 0 200 200">
-            <g stroke="#ffffff" fill="none">
-              <circle cx={100} cy={100} r={90} strokeWidth={20} />
-              <path
-                d="M62.737004,13.7923523 C105.08055,51.0454853 135.018754,126.906957 141.768278,182.963345"
-                strokeWidth={20}
-              />
-              <path
-                d="M10.3787186,87.7261455 C41.7092324,90.9577894 125.850356,86.5317271 163.474536,38.7920951"
-                strokeWidth={20}
-              />
-              <path
-                d="M41.3611549,163.928627 C62.9207607,117.659048 137.020642,86.7137169 189.041451,107.858103"
-                strokeWidth={20}
-              />
-            </g>
-          </svg>
-          QuickDoc-Finder
-        </a>
+      <div className="contact-form">
+        <form className="formUs" onSubmit={contactFrom.handleSubmit}>
+          <div className="form-groupC">
+            <input
+              type="text"
+              name="name"
+              className="input-fieldC form-input"
+              placeholder="Name"
+              onChange={contactFrom.handleChange}
+              value={contactFrom.values.name}
+            />
+          </div>
+          <div className="form-groupC">
+            <input
+              type="email"
+              name="email"
+              className="input-fieldC form-input"
+              placeholder="Email"
+              onChange={contactFrom.handleChange}
+              value={contactFrom.values.email}
+            />
+          </div>
+          <div className="form-groupC">
+            <textarea
+              name="message"
+              rows={5}
+              className="input-fieldC form-input"
+              placeholder="Message"
+              defaultValue={""}
+              onChange={contactFrom.handleChange}
+              value={contactFrom.values.message}
+            />
+          </div>
+          <div className="form-group">
+            <input
+              type="submit"
+              className="input-fieldC submit-btn"
+              defaultValue="Submit"
+            />
+          </div>
+        </form>
       </div>
     </div>
   </div>

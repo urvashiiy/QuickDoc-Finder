@@ -7,7 +7,7 @@ router.post('/add',(req,res) =>{
     //storing data to mongodb
     new Model(req.body).save()
     .then((result) => {
-        res.json(result)
+        res.json(result).json(result);
     }).catch((err) => {
         console.log(err)
         res.status(500).json(err)  //statuscode:500 show internal err
@@ -24,7 +24,7 @@ router.post('/authenticate', (req,res)=> {
         res.status(500).json(err)
     });
 });
-router.post('/getall', (req,res)=> {
+router.get('/getall', (req,res)=> {
     Model.find({})
     .then((result)=> {
        res.json(result)
@@ -34,5 +34,16 @@ router.post('/getall', (req,res)=> {
     });
 });
 
+router.get('/getbyid/:id',(req,res) => {
+    // empty brackets will give all the data from the database
+    console.log(req.params.id)
+    Model.findById(req.params.id)
+    .then((result) => {
+        res.json(result)
+    }).catch((err) => {
+        console.error(err)
+        res.status(500).json(err)
+    }); 
+});
 
 module.exports = router

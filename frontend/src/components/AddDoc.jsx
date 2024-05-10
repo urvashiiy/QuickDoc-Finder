@@ -1,101 +1,293 @@
 import React from 'react'
-import {useFormik} from 'formik'
-import { enqueueSnackbar } from 'notistack'
+import { useState } from 'react';
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
+import { enqueueSnackbar } from 'notistack';
+import { useNavigate } from 'react-router-dom'
 
 
-const AddDoc = () => {
-    // step 1. formik initialization
-    const AddDocForm = useFormik({
-        initialValues:{
-            fname:'',
-            email:'',
-            specialization:''
-        },
-        //step 5. Valdidation schema
-        onSubmit: async(values,action) =>{
-          console.log(values);
-          const res = await fetch('http://localhost:3000/doctors/add',{
-              method: 'POST',
-              body: JSON.stringify(values),
-              headers : {
-                  'Content-Type': 'application/json'
-              }
-          }); 
-          console.log(res.status)
-          action.resetForm()
-  
-          if (res.status)
-          action.resetForm()
-      if (res.status === 200){
-          enqueueSnackbar(' Successfull',{variant: 'success'})
-      } else{
-          enqueueSnackbar('Failed',{variant: 'error'})
+const myschema = Yup.object().shape({});
+
+const AddDoctor = () => {
+
+  const navigate = useNavigate();
+
+  const [selFile, setSelFile] = useState("");
+  const [certificate1File, setCertificate1File] = useState("");
+  const [certificate2File, setCertificate2File] = useState("");
+
+
+
+  const addDoctorForm = useFormik({
+    initialValues: {
+      name: '',
+      email: '',
+      password: '',
+      experience: '',
+      desc: '',
+      contact: '',
+      latitude: '',
+      longitude: '',
+      speciality: '',
+      image: '',
+      cer1: '',
+      cer2: '',
+      //avatar:'',
+      createdAt: new Date(),
+    },
+    onSubmit: async (values, action) => {
+      values.image = selFile;
+      values.cer1 = certificate1File;
+      values.cer2 = certificate2File;
+      console.log(values);
+
+
+      const res = await fetch('http://localhost:3000/doctor/add', {
+        method: 'POST',
+        body: JSON.stringify(values),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+
+      console.log(res.status);
+      action.resetForm();
+
+      if (res.status === 200) {
+
+        enqueueSnackbar('registration Successfully', {
+          variant: 'success', anchorOrigin: {
+            vertical: 'top',
+            horizontal: 'right',
+          }
+
+        });
+        navigate('/')
+      } else {
+        enqueueSnackbar('sucessfull', {
+          variant: 'error', anchorOrigin: {
+            vertical: 'top',
+            horizontal: 'right',
+          }
+        })
       }
-      },
-    
-    })
-  
-    
 
+
+      validationSchema: myschema
+    }
+  });
+
+  const uploadFile = (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+    setSelFile(file.name);
+    setCertificate1File(file.name);
+    setCertificate2File(file.name);
+    const fd = new FormData();
+    fd.append("myfile", file);
+    fetch("http://localhost:3000/util/uploadfile", {
+      method: "POST",
+      body: fd,
+    }).then((res) => {
+      if (res.status === 200) {
+        console.log("file uploaded");
+      }
+    });
+  };
+  const certificateFile = (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+    setCertificate1File(file.name);
+    const fd = new FormData();
+    fd.append("myfile", file);
+    fetch("http://localhost:3000/util/certificateFile", {
+      method: "POST",
+      body: fd,
+    }).then((res) => {
+      if (res.status === 200) {
+        console.log("file uploaded");
+      }
+    });
+  };
+
+
+  const certificateFile2 = (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+    setCertificate2File(file.name);
+    const fd = new FormData();
+    fd.append("myfile", file);
+    fetch("http://localhost:3000/util/certificateFile2", {
+      method: "POST",
+      body: fd,
+    }).then((res) => {
+      if (res.status === 200) {
+        console.log("file uploaded");
+      }
+    });
+  };
   return (
-    <div>
-      <div className="container-1 container-fluid p-5">
-      
-    <h1>Doctor Form</h1>
-    <form onSubmit={AddDocForm.handleChange} method="post">
-      <fieldset>
-        <legend>Personal Information:</legend>
-        <label htmlFor="fname">Full Name:</label>
-        <input type="text" id="fname" required="" onChange={AddDocForm.handleChange}
-                    value={AddDocForm.values.fname}  />
-        <label htmlFor="gender">Gender:</label>
-        <select id="gender" name="gender" required="">
-          <option value="">Select Gender</option>
-          <option value="male">Male</option>
-          <option value="female">Female</option>
-          <option value="other">Other</option>
-        </select>
-        <label htmlFor="phone">Contact Number:</label>
-        <input type="tel" id="phone" required=""  onChange={AddDocForm.handleChange}
-                    value={AddDocForm.values.phone}/>
-        <label htmlFor="email">Email Address: </label>
-        <input type="email" id="email" required="" onChange={AddDocForm.handleChange}
-                    value={AddDocForm.values.email} />
-        <label htmlFor="address">Address:</label>
-        <textarea
-          id="address"
-          name="address"
-          required=""
-          defaultValue={""}
-        />
-      </fieldset>
-      <fieldset>
-        <legend>Professional Information:</legend>
-        <label htmlFor="degree">Medical Degree(s) Earned:</label>
-        <input type="text" id="degree" name="degree" required="" />
-        <label htmlFor="specialty">Specialty(ies):</label>
-        <input type="text" id="specialty" name="specialty" required="" />
-        <label htmlFor="license">Medical License Number:</label>
-        <input type="text" id="license" name="license" required="" />
-        <label htmlFor="experience">Years of Experience:</label>
-        <input type="number" id="experience" name="experience" required="" />
-        <label htmlFor="employment">Current Employment Status:</label>
-        <input type="text" id="employment" name="employment" />
-        <label htmlFor="institution">Current Institution/Hospital:</label>
-        <input type="text" id="institution" name="institution" />
-        <label htmlFor="password">Password</label>
-        <input className="form-control"id='password' placeholder="Create password" type="password"
-                onChange={AddDocForm.handleChange}
-                value={AddDocForm.values.password}
+
+    <div className="container-fluid bg-img-addproduct d-flex ">
+      <div className="card   d-block m-auto bg-transparent  shadow " style={{ width: "450px", border: "none" }}>
+        <div className="card-header">
+          <h1 className="text-center fw-bold" style={{ fontFamily: "serif" }}>Add Project</h1>
+        </div>
+        <div className="card-body d-flex justify-content-center">
+          <form onSubmit={addDoctorForm.handleSubmit}>
+
+
+            <div className="form-outline">
+              <label htmlFor="Name">Name:</label>
+              <input
+                type="text" style={{ fontFamily: "cursive" }}
+                className="form-control shadow input mb-4"
+                id="name" placeholder="Enter Doctor Name"
+                onChange={addDoctorForm.handleChange}
+                value={addDoctorForm.values.name}
               />
-      </fieldset>
-      
-      <button type="submit">Submit</button>
-    </form>
-  </div>
-  
-  </div>
+            </div>
+
+            <div className="form-outline">
+
+              <input style={{ fontFamily: "cursive" }}
+                type="email"
+                className="form-control shadow input mb-4"
+                id="email" placeholder="Email"
+                onChange={addDoctorForm.handleChange}
+                value={addDoctorForm.values.email}
+              />
+
+            </div>
+            <div className="form-outline">
+
+              <input style={{ fontFamily: "cursive" }}
+                type="number"
+                className="form-control shadow input mb-4"
+                id="contact" placeholder="Contact"
+                onChange={addDoctorForm.handleChange}
+                value={addDoctorForm.values.contact}
+              />
+
+            </div>
+            <div className="form-outline">
+
+              <input
+                type="password" style={{ fontFamily: "cursive" }}
+                className="form-control shadow input mb-4"
+                id="password" placeholder="Enter password"
+                onChange={addDoctorForm.handleChange}
+                value={addDoctorForm.values.password}
+              />
+            </div>
+
+            <div className="form-outline">
+
+              <input
+                type="number" style={{ fontFamily: "cursive" }}
+                className="form-control shadow input mb-4"
+                id="experience" placeholder="Enter Doctor experience"
+                onChange={addDoctorForm.handleChange}
+                value={addDoctorForm.values.experience}
+              />
+            </div>
+
+            <div className="form-outline">
+
+              <input
+                type="desc" style={{ fontFamily: "cursive" }}
+                className="form-control shadow input mb-4"
+                id="desc" placeholder="Enter Doctor desc"
+                onChange={addDoctorForm.handleChange}
+                value={addDoctorForm.values.desc}
+              />
+            </div>
+
+
+            <div className="form-outline">
+
+              <input style={{ fontFamily: "cursive" }}
+                type="number"
+                className="form-control shadow input mb-4"
+                id="latitude" placeholder="Latitude"
+                onChange={addDoctorForm.handleChange}
+                value={addDoctorForm.values.latitude}
+              />
+
+            </div>
+            <div className="form-outline">
+
+              <input style={{ fontFamily: "cursive" }}
+                type="number"
+                className="form-control shadow input mb-4"
+                id="longitude" placeholder="Longitude"
+                onChange={addDoctorForm.handleChange}
+                value={addDoctorForm.values.longitude}
+              />
+
+            </div>
+            <div className="form-outline">
+
+              <input style={{ fontFamily: "cursive" }}
+                type="text"
+                className="form-control shadow input mb-4"
+                id="speciality" placeholder="Speciality"
+                onChange={addDoctorForm.handleChange}
+                value={addDoctorForm.values.speciality}
+              />
+
+            </div>
+
+            <div className="form-outline">
+              <label className="form-label" htmlFor="form3Example1m1">
+                Upload Photo
+              </label>
+              <input
+                type="file" style={{ fontFamily: "cursive" }}
+                className="form-control shadow input"
+                onChange={uploadFile}
+              />
+            </div>
+
+            <div className="form-outline">
+              <label className="form-label" htmlFor="form3Example1m1">
+                Upload certificate-1
+              </label>
+              <input
+                type="file" style={{ fontFamily: "cursive" }}
+                className="form-control shadow input"
+                onChange={certificateFile}
+              />
+            </div>
+            <div className="form-outline">
+              <label className="form-label" htmlFor="form3Example1m1">
+                Upload certificate- 2
+              </label>
+              <input
+                type="file" style={{ fontFamily: "cursive" }}
+                className="form-control shadow input"
+                onChange={certificateFile2}
+              />
+            </div>
+
+            <div className="text-center">
+              <button style={{ fontFamily: "serif" }}
+                type="submit"
+                className="btn btn-primary shadow fw-bold fs-5 mt-4 w-50 mb-4"
+              >
+                Add Doctor
+              </button>
+            </div>
+
+          </form >
+        </div >
+      </div >
+    </div >
+
+
+
+
   )
 }
 
-export default AddDoc
+export default AddDoctor
