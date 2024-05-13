@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <div><>
 
-      <section className="content-home">
+      <section className="content-home ">
         <div className="content_text">
           <img src="topAngle.png" alt="top_corner" className="green_corner" />
           <h2>
