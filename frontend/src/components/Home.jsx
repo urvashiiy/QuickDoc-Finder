@@ -16,7 +16,7 @@ const Home = () => {
             and assist them in their health recovery process by offering them
             wishes and warmth.
           </p>
-          <button className='bton'>Make Appointment</button>
+          <button className='bton'> Explore Location</button>
           <div className="corner_bottom">
             <img src="bottomAngle.png"
               alt="bottom_corner"
@@ -79,8 +79,11 @@ const Home = () => {
 
       {/* Our Doct */}
       <div className='y'>
+      <h2 className="text-center fw-bold mt-5" style={{ fontFamily: "serif" , color:'#2ae07c' }}> Our Doctor's </h2>
+
         <div className='body'>
           <div className="card-doc">
+            
             <div className="img-bx">
               <img src="https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjg2OC1zYXNpLTA2LmpwZw.jpg" alt="img" />
             </div>
@@ -89,7 +92,7 @@ const Home = () => {
                 <h2>
                   Emilia Roy
                   <br />
-                  <span>Senior Designer</span>
+                  <span>Cardilogist</span>
                 </h2>
                 <ul className="sco">
                   <li>
@@ -125,7 +128,7 @@ const Home = () => {
                 <h2>
                   Emilia Roy
                   <br />
-                  <span>Senior Designer</span>
+                  <span>Nuerologist</span>
                 </h2>
                 <ul className="sco">
                   <li>
@@ -161,7 +164,7 @@ const Home = () => {
                 <h2>
                   Emilia Roy
                   <br />
-                  <span>Senior Designer</span>
+                  <span>Dentist</span>
                 </h2>
                 <ul className="sco">
                   <li>
@@ -194,231 +197,212 @@ const Home = () => {
 
       {/* Our service */}
 
-      <div className="section-3">
-        <div className="containerSer">
-          <h1 className="heading-1 text-center">Our Services</h1>
-          <hr className="hr-line-1" />
-          <div className="row">
-            <div className="col-md-4">
-              <div className="d-flex flex-row">
-                <i className="fas fa-pencil-ruler fa-2x m-2" />
-                <div className="d-flex flex-column">
-                  <h4 className="m-2">Bootstrap Framework</h4>
-                  <p className="m-2">
-                    The Future is based on Bootstrap Framework, which makes it a
-                    nice template for any purpose.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-4">
-              <div className="d-flex flex-row">
-                <i className="fas fa-tv fa-2x m-2" />
-                <div className="d-flex flex-column">
-                  <h4 className="m-2">Responsive &amp; Retina Ready</h4>
-                  <p className="m-2">
-                    The Future looks great on any screen resolution and on any
-                    device due to its responsiveness.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-4">
-              <div className="d-flex flex-row">
-                <i className="fas fa-city fa-2x m-2" />
-                <div className="d-flex flex-column">
-                  <h4 className="m-2">Tons Of Tools For Real Needs</h4>
-                  <p className="m-2">
-                    Event calendar, bookings and schedule are just some of tools
-                    that come on board.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="row mt-2">
-            <div className="col-md-4">
-              <div className="d-flex flex-row">
-                <i className="fas fa-home fa-2x m-2" />
-                <div className="d-flex flex-column">
-                  <h4 className="m-2">Though Through Layout</h4>
-                  <p className="m-2">
-                    Huge number of content layouts allow to assemble unique pages
-                    with great flexibility.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-4">
-              <div className="d-flex flex-row">
-                <i className="far fa-edit fa-2x m-2" />
-                <div className="d-flex flex-column">
-                  <h4 className="m-2">Clean &amp; Crispy Design</h4>
-                  <p className="m-2">
-                    The Future is crafted by top industry leaders with love, care
-                    and customer needs in mind.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-4">
-              <div className="d-flex flex-row">
-                <i className="fas fa-magic fa-2x m-2" />
-                <div className="d-flex flex-column">
-                  <h4 className="m-2">Build For Speed</h4>
-                  <p className="m-2">
-                    Our template was built for speed. Get the best results at
-                    GTmetrix and Google PageSpeed.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
       <>
-        {/* Footer */}
-        <footer className="text-center text-lg-start bg-body-tertiary text-muted footie">
-          {/* Section: Social media */}
-          <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom mt-5 footer">
-            {/* Left */}
-            <div className="me-5 d-none d-lg-block">
-              <span>Get connected with us on social networks:</span>
-            </div>
-            {/* Left */}
-            {/* Right */}
-            <div>
-              <a href="" className="me-4 text-reset">
-                <i className="fab fa-facebook-f" />
-              </a>
-              <a href="" className="me-4 text-reset">
-                <i className="fab fa-twitter" />
-              </a>
-              <a href="" className="me-4 text-reset">
-                <i className="fab fa-google" />
-              </a>
-              <a href="" className="me-4 text-reset">
-                <i className="fab fa-instagram" />
-              </a>
-              <a href="" className="me-4 text-reset">
-                <i className="fab fa-linkedin" />
-              </a>
-              <a href="" className="me-4 text-reset">
-                <i className="fab fa-github" />
-              </a>
-            </div>
-            {/* Right */}
-          </section>
-          {/* Section: Social media */}
-          {/* Section: Links  */}
-          <section className="foot">
-            <div className="container-foot text-center text-md-start mt-5">
-              {/* Grid row */}
-              <div className="row mt-3">
-                {/* Grid column */}
-                <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                  {/* Content */}
-                  <h6 className="text-uppercase fw-bold mb-4">
-                    <i className="fas fa-gem me-3" />
-                    Company name
-                  </h6>
-                  <p>
-                    Here you can use rows and columns to organize your footer content.
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  </p>
+        <section className="depart-section">
+          <section className="breadcrumb_part breadcrumb_bg">
+            <div className="container-t">
+              <div className="row">
+                <div className="col-lg-12">
+                  <div className="breadcrumb_iner">
+                    <div className="breadcrumb_iner_item">
+
+                    </div>
+                  </div>
                 </div>
-                {/* Grid column */}
-                {/* Grid column */}
-                <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                  {/* Links */}
-                  <h6 className="text-uppercase fw-bold mb-4">Products</h6>
-                  <p>
-                    <a href="#!" className="text-reset">
-                      Angular
-                    </a>
-                  </p>
-                  <p>
-                    <a href="#!" className="text-reset">
-                      React
-                    </a>
-                  </p>
-                  <p>
-                    <a href="#!" className="text-reset">
-                      Vue
-                    </a>
-                  </p>
-                  <p>
-                    <a href="#!" className="text-reset">
-                      Laravel
-                    </a>
-                  </p>
-                </div>
-                {/* Grid column */}
-                {/* Grid column */}
-                <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                  {/* Links */}
-                  <h6 className="text-uppercase fw-bold mb-4">Useful links</h6>
-                  <p>
-                    <a href="#!" className="text-reset">
-                      Pricing
-                    </a>
-                  </p>
-                  <p>
-                    <a href="#!" className="text-reset">
-                      Settings
-                    </a>
-                  </p>
-                  <p>
-                    <a href="#!" className="text-reset">
-                      Orders
-                    </a>
-                  </p>
-                  <p>
-                    <a href="#!" className="text-reset">
-                      Help
-                    </a>
-                  </p>
-                </div>
-                {/* Grid column */}
-                {/* Grid column */}
-                <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                  {/* Links */}
-                  <h6 className="text-uppercase fw-bold mb-4">Contact</h6>
-                  <p>
-                    <i className="fas fa-home me-3" /> New York, NY 10012, US
-                  </p>
-                  <p>
-                    <i className="fas fa-envelope me-3" />
-                    info@example.com
-                  </p>
-                  <p>
-                    <i className="fas fa-phone me-3" /> + 01 234 567 88
-                  </p>
-                  <p>
-                    <i className="fas fa-print me-3" /> + 01 234 567 89
-                  </p>
-                </div>
-                {/* Grid column */}
               </div>
-              {/* Grid row */}
             </div>
           </section>
-          {/* Section: Links  */}
-          {/* Copyright */}
-          <div
-            className="text-center p-4"
-            style={{ backgroundColor: "rgba(0, 0, 0, 0.05)" }}
-          >
-            © 2021 Copyright:
-            <a className="text-reset fw-bold" href="https://mdbootstrap.com/">
-              MDBootstrap.com
-            </a>
+          {/* breadcrumb start*/}
+          {/* our depertment part start*/}
+          <section className="our_depertment section_padding single_pepertment_page">
+            <div className="container-t">
+              <div className="row justify-content-center text-center">
+                <div className="col-xl-12">
+                  <div className="depertment_content">
+                    <div className="row justify-content-center">
+                      <div className="col-xl-8">
+                        <h2 style={{ color: '#129e95' }}>Our Department</h2>
+                        <div className="row">
+                          <div className="col-lg-6 col-sm-6">
+                            <div className="single_our_depertment">
+                              <span className="our_depertment_icon">
+                                <img src={"./src/assets/icon/feature_2.svg"} alt="" />
+                              </span>
+                              <h4>Better Future</h4>
+                              <p>
+                                Darkness multiply rule Which from without life creature
+                                blessed give moveth moveth seas make day which divided
+                                our have.
+                              </p>
+                            </div>
+                          </div>
+                          <div className="col-lg-6 col-sm-6">
+                            <div className="single_our_depertment">
+                              <span className="our_depertment_icon">
+                                <img src={"./src/assets/icon/feature_2.svg"} alt="" />
+                              </span>
+                              <h4>Better Future</h4>
+                              <p>
+                                Darkness multiply rule Which from without life creature
+                                blessed give moveth moveth seas make day which divided
+                                our have.
+                              </p>
+                            </div>
+                          </div>
+                          <div className="col-lg-6 col-sm-6">
+                            <div className="single_our_depertment">
+                              <span className="our_depertment_icon">
+                                <img src={"./src/assets/icon/feature_2.svg"} alt="" />
+                              </span>
+                              <h4>Better Future</h4>
+                              <p>
+                                Darkness multiply rule Which from without life creature
+                                blessed give moveth moveth seas make day which divided
+                                our have.
+                              </p>
+                            </div>
+                          </div>
+                          <div className="col-lg-6 col-sm-6">
+                            <div className="single_our_depertment">
+                              <span className="our_depertment_icon">
+                                <img src={"./src/assets/icon/feature_2.svg"} alt="" />
+                              </span>
+                              <h4>Better Future</h4>
+                              <p>
+                                Darkness multiply rule Which from without life creature
+                                blessed give moveth moveth seas make day which divided
+                                our have.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+      </>
+
+
+      < >
+
+        <meta charSet="UTF-8" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Animation 1</title>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+          integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+          crossOrigin="anonymous"
+          referrerPolicy="no-referrer"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+          rel="stylesheet"
+        />
+        <link rel="stylesheet" href="/section1/Style.css" />
+        <footer className='bodyfoot'>
+          <div className="background">
+            <svg
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlnsXlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              width="50%"
+              height="50%"
+              viewBox="0 0 1600 900"
+            >
+              <defs>
+                <path
+                  id="wave"
+                  fill="rgba(62, 206, 153, 0.6)"
+                  d="M-363.852,502.589c0,0,236.988-41.997,505.475,0
+s371.981,38.998,575.971,0s293.985-39.278,505.474,5.859s493.475,48.368,716.963-4.995v560.106H-363.852V502.589z"
+                />
+              </defs>
+              <g>
+                <use xlinkHref="#wave" opacity=".4">
+                  <animateTransform
+                    attributeName="transform"
+                    attributeType="XML"
+                    type="translate"
+                    dur="8s"
+                    calcMode="spline"
+                    values="270 230; -334 180; 270 230"
+                    keyTimes="0; .5; 1"
+                    keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+                    repeatCount="indefinite"
+                  />
+                </use>
+                <use xlinkHref="#wave" opacity=".6">
+                  <animateTransform
+                    attributeName="transform"
+                    attributeType="XML"
+                    type="translate"
+                    dur="6s"
+                    calcMode="spline"
+                    values="-270 230;243 220;-270 230"
+                    keyTimes="0; .6; 1"
+                    keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+                    repeatCount="indefinite"
+                  />
+                </use>
+                <use xlinkHref="#wave" opacty=".9">
+                  <animateTransform
+                    attributeName="transform"
+                    attributeType="XML"
+                    type="translate"
+                    dur="4s"
+                    calcMode="spline"
+                    values="0 230;-140 200;0 230"
+                    keyTimes="0; .4; 1"
+                    keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+                    repeatCount="indefinite"
+                  />
+                </use>
+              </g>
+            </svg>
           </div>
-          {/* Copyright */}
+          <section className='sect-fot'>
+            <ul className="socialsfo">
+              <li>
+                <a className="fa-brands fa-x-twitter" />
+              </li>
+              <li>
+                <a className="fa-brands fa-facebook" />
+              </li>
+              <li>
+                <a className="fa-brands fa-linkedin" />
+              </li>
+            </ul>
+            <ul className="linksFo">
+              <li>
+                <a>Home</a>
+              </li>
+              <li>
+                <a>About</a>
+              </li>
+              <li>
+                <a>Portfolio</a>
+              </li>
+              <li>
+                <a>Skillset</a>
+              </li>
+              <li>
+                <a>Hire</a>
+              </li>
+            </ul>
+            <p className="legal">© 2024 All rights reserved</p>
+          </section>
         </footer>
-        {/* Footer */}
+
       </>
 
 
