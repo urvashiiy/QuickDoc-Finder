@@ -131,7 +131,7 @@ const AddDoctor = () => {
     <div className="container-fluid bg-img-addproduct d-flex ">
       <div className="card   d-block m-auto bg-transparent  shadow " style={{ width: "450px", border: "none" }}>
         <div className="card-header">
-          <h1 className="text-center fw-bold" style={{ fontFamily: "serif" }}>Add Project</h1>
+          <h1 className="text-center fw-bold" style={{ fontFamily: "serif" }}>Doctor's Registration</h1>
         </div>
         <div className="card-body d-flex justify-content-center">
           <form onSubmit={addDoctorForm.handleSubmit}>
@@ -273,7 +273,7 @@ const AddDoctor = () => {
             <div className="text-center">
               <button style={{ fontFamily: "serif" }}
                 type="submit"
-                className="btn btn-primary shadow fw-bold fs-5 mt-4 w-50 mb-4"
+                className="btn btn-primary shadow fw-bold fs-5 mt-4 w-60 mb-4"
               >
                 Add Doctor
               </button>

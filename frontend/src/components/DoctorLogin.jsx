@@ -1,6 +1,7 @@
 import React from 'react'
 import { useFormik } from 'formik';
 import { enqueueSnackbar } from 'notistack';
+import "../components/DocLogin.css"
 
 const DoctorLogin = () => {
 
@@ -11,7 +12,7 @@ const DoctorLogin = () => {
       password: '',
 
     },
-    onSubmit: async (values, action) => {
+    onSubmit: async(values, action) => {
       ;
       console.log(values);
 
@@ -47,59 +48,67 @@ const DoctorLogin = () => {
       }
 
 
-      validationSchema: myschema
     }
   });
   return (
     <>
-      <div className='loginbody'>
-        <div className="containerLog">
-          <div className="row">
-            <div className="col-lg-3 col-md-2" />
-            <div className="col-lg-6 col-md-8 login-box">
-              <div className="col-lg-12 login-key">
-                <i className="fa fa-user-md" aria-hidden="true" />
+    <div className="bodyDOCLO">
+    <h2 className='tim'>Doctor Login</h2>
+      <div className="container-me">
+        
+        <div className="screen-me">
+          <div className="screen__content">
+            <form className="login" onSubmit={DoctorLoginForm.handleSubmit}>
+              <div className="login__field">
+                <i className="login__icon fas fa-user" />
+                <input
+                  type="text"
+                  className="login__input"
+                  placeholder=" Email"
+                  id="email"
+                  onChange={DoctorLoginForm.handleChange}
+                  value={DoctorLoginForm.values.email}
+                />
               </div>
-              <div className="col-lg-12 login-title">DOCTOR PANEL</div>
-              <div className="col-lg-12 login-form">
-                <div className="col-lg-12 login-form">
-                  <form onSubmit={DoctorLoginForm.handleSubmit}>
-                    <div className="form-groupDL">
-                      <label className="form-control-label">Email:</label>
-                      <input type="email" className="form-control"
-                        id="email" placeholder="Email"
-                        onChange={DoctorLoginForm.handleChange}
-                        value={DoctorLoginForm.values.email}
-                      />
-
-                    </div>
-                    <div className="form-groupDL">
-                      <label className="form-control-label">PASSWORD</label>
-                      <input type="password" className="form-control" i=""
-                        id="password" placeholder="Password"
-                        onChange={DoctorLoginForm.handleChange}
-                        value={DoctorLoginForm.values.password}
-                      />
-                    </div>
-                    <div className="col-lg-12 loginbttm">
-                      <div className="col-lg-6 login-btm login-text">
-                        {/* Error Message */}
-                      </div>
-                      <div className="col-lg-6 login-btm login-buttone">
-                        <button type="submit" className="btn btn-outline-primary">
-                          LOGIN
-                        </button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
+              <div className="login__field">
+                <i className="login__icon fas fa-lock" />
+                <input
+                  type="password"
+                  className="login__input"
+                  placeholder="Password"
+                  id="password"
+                  name="password" // Add name attribute here
+                  onChange={DoctorLoginForm.handleChange}
+                  value={DoctorLoginForm.values.password}
+                />
               </div>
-              
+              <button type='submit' className="button login__submit">
+                <span className="button__text">Log In Now</span>
+                <i className="button__icon fas fa-chevron-right" />
+              </button>
+            </form>
+            <div className="social-login">
+              <h3>log in via</h3>
+              <div className="social-icons">
+                <a href="#" className="social-login__icon fab fa-instagram" />
+                <a href="#" className="social-login__icon fab fa-facebook" />
+                <a href="#" className="social-login__icon fab fa-twitter" />
+              </div>
             </div>
+          </div>
+          <div className="screen__background">
+            <span className="screen__background__shape screen__background__shape4" />
+            <span className="screen__background__shape screen__background__shape3" />
+            <span className="screen__background__shape screen__background__shape2" />
+            <span className="screen__background__shape screen__background__shape1" />
           </div>
         </div>
       </div>
+      </div>
+
     </>
+
+
 
   )
 }

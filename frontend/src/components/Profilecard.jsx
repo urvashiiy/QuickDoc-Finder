@@ -13,10 +13,10 @@ const Profilecard = () => {
                                 <Link to="/Home">Home</Link>
                             </li>
                             <li className="breadcrumb-item">
-                                <a href="javascript:void(0)">User</a>
+                                <a href="javascript:void(0)">Doctor</a>
                             </li>
                             <li className="breadcrumb-item active" aria-current="page">
-                                User Profile
+                                Doctor Profile
                             </li>
                         </ol>
                     </nav>
