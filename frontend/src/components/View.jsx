@@ -55,13 +55,13 @@ const View = () => {
               className="border mx-1 rounded-2"
               target="_blank"
               data-type="image"
-              href="https://mdbcdn.b-cdn.net/img/bootstrap-ecommerce/items/detail1/big1.webp"
+        
             >
               <img
                 width={60}
                 height={60}
                 className="rounded-2"
-                src="https://mdbcdn.b-cdn.net/img/bootstrap-ecommerce/items/detail1/big1.webp"
+                src={`http://localhost:3000/${doctors.cer1}`}
               />
             </a>
             <a
