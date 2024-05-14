@@ -7,7 +7,7 @@ router.post('/add',(req,res) =>{
     //storing data to mongodb
     new Model(req.body).save()
     .then((result) => {
-        res.json(result).json(result);
+        res.json(result);
     }).catch((err) => {
         console.log(err)
         res.status(500).json(err)  //statuscode:500 show internal err
