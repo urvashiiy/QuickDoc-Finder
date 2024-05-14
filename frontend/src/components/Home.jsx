@@ -37,42 +37,36 @@ const Home = () => {
       </section>
 
       {/* About */}
-      <div class="section-4">
+      <div class="section-4 m-5">
         <div class="container-fluid p-0">
           <div class="row">
-            <div class="col-md-5">
-              <img src="section-4.jpg" alt="section-4" width="113%" height="100%" />
+            <div class="col-md-6">
+            <img src={"./src/assets/about.png"} alt="" />
             </div>
-            <div class="col-md-7">
-              <h3 class="heading-1">About Us</h3>
-              <hr class="h-line-1" />
-              <br />
-              <p class="para-1">We are a team of professional, energetic individuals with talented designers and experienced managers
-                available to guide our clients through the flawless and timely execution of any web design project.
-                Since day one, we have been delivering creative and unique websites to our clients worldwide.</p>
-              <div class="d-flex flex-row">
-                <div class="col-md-6">
-                  <div class="d-flex flex-row">
-                    <i class="fas fa-pencil-ruler fa-2x m-2"></i>
-                    <div class="d-flex flex-column">
-                      <h4 class="m-2">Bootstrap Framework</h4>
-                      <p class="m-2">The Future is based on Bootstrap Framework, which makes it a nice template for any purpose.</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-md-6">
-                  <div class="d-flex flex-row">
-                    <i class="far fa-edit fa-2x m-2"></i>
-                    <div class="d-flex flex-column">
-                      <h4 class="m-2">Clean & Crispy Design</h4>
-                      <p class="m-2">The Future is crafted by top industry leaders with love, care and customer needs in mind.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
+            <div className="col-lg-5 col-md-12">
+            <div className="section-tittle mb-40">
+            <h2 className='mt-5'>About Us</h2>
+          </div>
+        <div className="about-captiomb-50">
+          {/* Section Tittle */}
+          
+          <div className="section-tittle mb-35">
+            <h2 className='mt-5 mb-5'>Create a healthy life you love!</h2>
+          </div>
+          <p className="pera-top mb-40">
+            Almost before we knew it, we had left the ground
+          </p>
+          <p className="pera-bottom mb-30">
+            Praesent porttitor, nulla vitae posuere iaculis, arcu nisl dignissim
+            dolor, a pretium mi sem ut ipsum. Fusce fermentum. Pellentesque
+            libero tortor, tincidunt et.
+          </p>
+          <div className="icon-about">
+            <img src={"./src/assets/icon/about1.svg"} alt="" className=" mr-20" />
+            <img src={"./src/assets/icon/about2.svg"} alt="" />
+          </div>
+        </div>
+      </div>
           </div>
         </div>
       </div>
