@@ -21,6 +21,7 @@ import ManageDoctor from './components/Admin/ManageDoctor'
 import ManageUser from './components/Admin/ManageUser'
 import AdminProfile from './components/Admin/AdminProfile'
 import Dashboard from './components/Admin/Dashboard'
+import DoctorProfile from './components/DoctorProfile'
 
 
 
@@ -43,6 +44,7 @@ const App = () => {
       <Route path='/DoctorLogin' element = {<DoctorLogin/>}/>
       <Route path='/ForgetPassword' element = {<ForgetPassword/>}/>
       <Route path='/View/:id' element = {<View/>}/>
+      <Route path="/DoctorProfile" element={<DoctorProfile />} />
   
   
       <Route path='admin' element={<Admin/>}>
