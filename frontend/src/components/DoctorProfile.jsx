@@ -182,7 +182,7 @@ const DoctorProfile = () => {
         </div>
 
 
-        <div className="container ">
+        <div className="container-p ">
           <div className="main-body1 w-100">
 
             <div className="row gutters-sm">
