@@ -172,19 +172,21 @@ body {
   max-width: 1440px;
   margin: auto;
 }
-nav {
+.navi {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 25px 50px;
+  margin: 25px 55px;
   
 }
-.navUL {
+.navUI {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  gap: 10px;
+  gap: 20px;
+  
   width: 100%;
+  float: right;
 }
 .content-home {
   display: flex;
@@ -269,10 +271,6 @@ p {
   bottom: 0;
   height: 90%;
 }
-
-
-
-
 
 
 /*ADD DOc*/
