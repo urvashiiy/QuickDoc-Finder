@@ -1,12 +1,10 @@
 import React from 'react'
-import {BrowserRouter ,Routes ,Route} from 'react-router-dom'
-import {SnackbarProvider} from 'notistack'
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
+import { SnackbarProvider } from 'notistack'
 import Home from './components/Home'
 import Navbar from './components/Navbar'
 import './App.css'
-
 import Contact from './components/Contact'
-
 import DoctorListing from './components/DoctorListing'
 import Location from './components/Location'
 import SecLS from './components/SecLS'
@@ -22,44 +20,46 @@ import ManageUser from './components/Admin/ManageUser'
 import AdminProfile from './components/Admin/AdminProfile'
 import Dashboard from './components/Admin/Dashboard'
 
-
-
-
 const App = () => {
-  return (
-    <div> 
-      <SnackbarProvider>
-    <BrowserRouter>
-   <Navbar />
-    <Routes>
-      <Route path = '/' element = {<Home/>}/>
-      <Route path='/Home' element = {<Home/>}/>
-      <Route path='/SecLS' element = {<SecLS/>}/>
-      <Route path='/Contact' element = {<Contact/>}/>
-      <Route path='/DoctorListing' element = {<DoctorListing/>}/>
-      <Route path='/Location' element = {<Location/>}/>
-      <Route path='/ProfileCard' element = {<Profilecard/>}/>
-      <Route path='/PushNotificationButton' element={<PushNotificationButton />} />
-      <Route path='/DoctorLogin' element = {<DoctorLogin/>}/>
-      <Route path='/ForgetPassword' element = {<ForgetPassword/>}/>
-      <Route path='/View/:id' element = {<View/>}/>
-  
-  
-      <Route path='admin' element={<Admin/>}>
-      <Route path='AddDoc' element = {<AddDoctor/>}/>
-      <Route path='ManageDoctor' element = {<ManageDoctor/>}/>
-      <Route path='ManageUser' element = {<ManageUser/>}/>
-      <Route path='AdminProfile' element = {<AdminProfile/>}/>
-      <Route path='Dashboard' element = {<Dashboard/>}/>
-        
-      </Route>
-      </Routes>
-    
-    </BrowserRouter>
-    </SnackbarProvider>
-  
-    </div>
-  )
+    return (
+        <SnackbarProvider>
+            <BrowserRouter>
+                <Content />
+            </BrowserRouter>
+        </SnackbarProvider>
+    )
 }
 
-export default App
+const Content = () => {
+    const location = useLocation();
+    const isAdminRoute = location.pathname.startsWith('/admin');
+
+    return (
+        <div>
+            {!isAdminRoute && <Navbar />}  
+            <Routes>
+                <Route path='/' element={<Home />} />
+                <Route path='/Home' element={<Home />} />
+                <Route path='/SecLS' element={<SecLS />} />
+                <Route path='/Contact' element={<Contact />} />
+                <Route path='/DoctorListing' element={<DoctorListing />} />
+                <Route path='/Location' element={<Location />} />
+                <Route path='/ProfileCard' element={<Profilecard />} />
+                <Route path='/PushNotificationButton' element={<PushNotificationButton />} />
+                <Route path='/DoctorLogin' element={<DoctorLogin />} />
+                <Route path='/ForgetPassword' element={<ForgetPassword />} />
+                <Route path='/View/:id' element={<View />} />
+
+                <Route path='admin' element={<Admin />}>
+                    <Route path='AddDoc' element={<AddDoctor />} />
+                    <Route path='ManageDoctor' element={<ManageDoctor />} />
+                    <Route path='ManageUser' element={<ManageUser />} />
+                    <Route path='AdminProfile' element={<AdminProfile />} />
+                    <Route path='Dashboard' element={<Dashboard />} />
+                </Route>
+            </Routes>
+        </div>
+    );
+}
+
+export default App;

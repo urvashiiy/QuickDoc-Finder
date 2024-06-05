@@ -37,9 +37,9 @@ const Home = () => {
       </section>
 
       {/* About */}
-      <div class="section-4 m-5">
-        <div class="container-fluid p-0">
-          <div class="row">
+      <div class="section-4 m-5 mr-5">
+        <div class="container-fluid p-2">
+          <div class="row ">
             <div class="col-md-6">
             <img src={"./src/assets/about.png"} alt="" />
             </div>
@@ -72,122 +72,7 @@ const Home = () => {
       </div>
 
       {/* Our Doct */}
-      <div className='y'>
-      <h2 className="text-center fw-bold mt-5" style={{ fontFamily: "serif" , color:'#2ae07c' }}> Our Doctor's </h2>
-
-        <div className='body'>
-          <div className="card-doc">
-            
-            <div className="img-bx">
-              <img src="https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjg2OC1zYXNpLTA2LmpwZw.jpg" alt="img" />
-            </div>
-            <div className="contentDoc">
-              <div className="detail-doc">
-                <h2>
-                  Emilia Roy
-                  <br />
-                  <span>Cardilogist</span>
-                </h2>
-                <ul className="sco">
-                  <li>
-                    <a href="#">
-                      <i className="fab fa-facebook-f" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i className="fab fa-twitter" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i className="fab fa-linkedin-in" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i className="fab fa-instagram" />
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div className="card-doc">
-            <div className="img-bx">
-              <img src="https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjg2OC1zYXNpLTA2LmpwZw.jpg" alt="img" />
-            </div>
-            <div className="contentDoc">
-              <div className="detail-doc">
-                <h2>
-                  Emilia Roy
-                  <br />
-                  <span>Nuerologist</span>
-                </h2>
-                <ul className="sco">
-                  <li>
-                    <a href="#">
-                      <i className="fab fa-facebook-f" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i className="fab fa-twitter" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i className="fab fa-linkedin-in" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i className="fab fa-instagram" />
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div className="card-doc">
-            <div className="img-bx">
-              <img src="https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjg2OC1zYXNpLTA2LmpwZw.jpg" alt="img" />
-            </div>
-            <div className="contentDoc">
-              <div className="detail-doc">
-                <h2>
-                  Emilia Roy
-                  <br />
-                  <span>Dentist</span>
-                </h2>
-                <ul className="sco">
-                  <li>
-                    <a href="#">
-                      <i className="fab fa-facebook-f" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i className="fab fa-twitter" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i className="fab fa-linkedin-in" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i className="fab fa-instagram" />
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
+      
 
       {/* Our service */}
 
