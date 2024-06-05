@@ -3,6 +3,7 @@ import React, { useRef } from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { MapContainer, Marker, Popup, TileLayer} from 'react-leaflet'
+import {Link} from 'react-router-dom'
 
 
 const Location = () => {
@@ -14,19 +15,19 @@ const Location = () => {
 
     const mapRef = useRef();
 
-    // const fetchDoctors = async () => {
-    //     const res = await fetch("http://localhost:3000/doctor/getall");
+    const fetchDoctors = async () => {
+        const res = await fetch("http://localhost:3000/doctor/getall");
 
-    //     console.log(res.status);
+        console.log(res.status);
 
-    //     const data = await res.json();
-    //     console.log(data);
-    //     setDoctorList(data);
-    // };
+        const data = await res.json();
+        console.log(data);
+        setDoctorList(data);
+    };
 
-    // useEffect(() => {
-    //     fetchDoctors();
-    // }, []);
+    useEffect(() => {
+        fetchDoctors();
+    }, []);
 
 
     const getCurrentLocation = () => {
@@ -65,7 +66,7 @@ const Location = () => {
                 coords.length > 0 && (
                     <MapContainer
                         onClick={e => console.log(e)}
-                        style={{ width: 1200, height: 800 }} center={coords} zoom={20} scrollWheelZoom={true}>
+                        style={{ width: 1400, height: 800 }} center={coords} zoom={20} scrollWheelZoom={true}>
                         <TileLayer
                             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -80,8 +81,8 @@ const Location = () => {
                                         <Marker key={doctor._id} position={[doctor.latitude, doctor.longitude]}>
                                             <Popup>
                                                 <h2>{doctor.name}</h2>
-                                                <p>{doctor.speciality}</p>
-                                                <button onClick={() => setSelDoc(doctor)}>Select</button>
+                                                <h4 className='mt-3'>{doctor.speciality}</h4>
+                                                <Link to={'/main/DocProfile/' + doctor._id} className="btn btn-outline-primary m-2">View Profile</Link>
                                             </Popup>
                                         </Marker>
                                     )
@@ -110,4 +111,4 @@ const Location = () => {
     )
 }
 
-export default Location
+export default Location
