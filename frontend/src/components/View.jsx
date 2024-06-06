@@ -13,7 +13,7 @@ const View = () => {
   const [currentUser, setCurrentUser] = useState(JSON.parse(sessionStorage.getItem('user')));
   const [selCoords, setSelCoords] = useState([]);
   const [selDoc, setSelDoc] = useState(null);
-  const [doctorList, setdoctorList] = useState([]);
+  // const [doctorList, setdoctorList] = useState([]);
 
   useEffect(() => {
     const fetchDoctors = async () => {
@@ -46,6 +46,7 @@ const View = () => {
   }
 
   const selectDoctor = (currentDoctor) => {
+    console.log(currentDoctor)
     setSelDoc(currentDoctor);
     if (currentDoctor.notiToken) {
       console.log('notification sent');
@@ -170,7 +171,8 @@ const View = () => {
 
 
                   </div>
-                  <button onClick={() => selectDoctor(doctorList)}>
+                  <button onClick={() => 
+                    selectDoctor(doctors)}>
                     Send Notification
                   </button>
 

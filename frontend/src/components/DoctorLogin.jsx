@@ -57,11 +57,13 @@ const DoctorLogin = () => {
   return (
     <>
       <div className="bodyDOCLO">
-        <h2 className='tim'>Doctor Login</h2>
+        
         <div className="container-me">
 
           <div className="screen-me">
+            
             <div className="screen__content">
+            <h2 className='tim'>Doctor Login</h2>
               <form className="login" onSubmit={DoctorLoginForm.handleSubmit}>
                 <div className="login__field">
                   <i className="login__icon fas fa-user" />
