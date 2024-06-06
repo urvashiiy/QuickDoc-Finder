@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+
 
 const Navbar = () => {
   return (
@@ -37,7 +36,7 @@ const Navbar = () => {
               <li className="nav-item">
                 <Link className="nav-link" to="/Contact">Contact</Link>
               </li>
-              <li className="nav-item dropdown">
+              <li className="nav-item dropdown dropright">
                 <a
                   className="nav-link dropdown-toggle"
                   href="#"
@@ -49,22 +48,22 @@ const Navbar = () => {
                   Dropdown
                 </a>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a className="dropdown-item" href="#">Action</a></li>
-                  <li><a className="dropdown-item" href="#">Another action</a></li>
+                  <li><Link className="dropdown-item" href="#">User</Link></li>
+                  <li><Link className="dropdown-item" href="#">Another action</Link></li>
                   <li>
-                    <a class="dropdown-item" href="#"> Submenu &raquo; </a>
-                    <ul class="dropdown-menu dropdown-submenu dropdown-submenu-left">
+                    <Link class="dropdown-item" href="#"> Submenu &raquo; </Link>
+                    <ul class="dropdown-menu dropdown-submenu dropright ">
                       <li>
-                        <a class="dropdown-item" href="#">Submenu item 1</a>
+                        <Link class="dropdown-item" href="#">Submenu item 1</Link>
                       </li>
                       <li>
-                        <a class="dropdown-item" href="#">Submenu item 2</a>
+                        <Link class="dropdown-item" href="#">Submenu item 2</Link>
                       </li>
                       <li>
-                        <a class="dropdown-item" href="#">Submenu item 4</a>
+                        <Link class="dropdown-item" href="#">Submenu item 4</Link>
                       </li>
                       <li>
-                        <a class="dropdown-item" href="#">Submenu item 5</a>
+                        <Link class="dropdown-item" href="#">Submenu item 5</Link>
                       </li>
                     </ul>
                   </li>
