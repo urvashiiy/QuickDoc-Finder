@@ -50,6 +50,8 @@ const Content = () => {
                 <Route path='/DoctorLogin' element={<DoctorLogin />} />
                 <Route path='/ForgetPassword' element={<ForgetPassword />} />
                 <Route path='/View/:id' element={<View />} />
+                <Route path='/DoctorProfile' element={<DoctorProfile />} />
+
 
                 <Route path='admin' element={<Admin />}>
                     <Route path='AddDoc' element={<AddDoctor />} />

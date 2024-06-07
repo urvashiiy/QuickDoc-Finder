@@ -1700,7 +1700,7 @@ margin: 8%;
   margin-bottom: 30px;
   background-color: #f7f5ec;
   text-align: center;
-  
+  overflow: hidden;
   position: relative;
 }
 
