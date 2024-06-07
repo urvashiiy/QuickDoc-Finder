@@ -21,23 +21,26 @@
     
 
 .bodyDOCLO {
-	background: linear-gradient(90deg, #94e2d5, #44d0b9);		
+	background: linear-gradient(90deg, #94e2d5, #44d0b9);	
+	/* height: 90vh; */
+
 }
 
 .container-me {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	min-height: 100vh;
+	min-height: 90vh;
 }
 
 .screen-me {		
 	background: linear-gradient(90deg, #6ef1db, #44d0b9);		
 	position: relative;	
-	height: 600px;
+	height: 500px;
 	width: 380px;	
 	box-shadow: 0px 0px 24px #58e9d1;
 	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
+	
 }
 
 .screen__content {

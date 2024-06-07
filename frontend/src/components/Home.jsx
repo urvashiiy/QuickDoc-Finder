@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
   return (
@@ -16,7 +17,7 @@ const Home = () => {
             and assist them in their health recovery process by offering them
             wishes and warmth.
           </p>
-          <button className='bton'> Explore Location</button>
+          <Link to='/Location' className="btn btn-primary">Find a Doctor</Link>
           <div className="corner_bottom">
             <img src="bottomAngle.png"
               alt="bottom_corner"

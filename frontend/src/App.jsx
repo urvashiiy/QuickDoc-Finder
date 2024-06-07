@@ -19,6 +19,7 @@ import ManageDoctor from './components/Admin/ManageDoctor'
 import ManageUser from './components/Admin/ManageUser'
 import AdminProfile from './components/Admin/AdminProfile'
 import Dashboard from './components/Admin/Dashboard'
+import DoctorProfile from './components/DoctorProfile'
 
 const App = () => {
     return (

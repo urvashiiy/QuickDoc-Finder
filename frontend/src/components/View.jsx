@@ -1,9 +1,19 @@
 import React, { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
+import LocationSelector from './LocationSelector';
+import app_config from "../config";
+import { useFormik } from "formik";
+import { messaging } from './Firebase';
+import { getToken } from 'firebase/messaging';
 
 const View = () => {
   const { id } = useParams();
   const [doctors, setDoctors] = useState({});
+
+  const [currentUser, setCurrentUser] = useState(JSON.parse(sessionStorage.getItem('user')));
+  const [selCoords, setSelCoords] = useState([]);
+  const [selDoc, setSelDoc] = useState(null);
+  // const [doctorList, setdoctorList] = useState([]);
 
   useEffect(() => {
     const fetchDoctors = async () => {
@@ -23,6 +33,26 @@ const View = () => {
 
     fetchDoctors();
   }, [id]);
+
+  const sendNotification = async (notiToken) => {
+    const res = await fetch('http://localhost:3000/util/sendNotification', {
+      method: 'POST',
+      body: JSON.stringify({ notiToken, data: { title: 'Hello', body: 'This is a test notification' } }),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+    console.log(res.status);
+  }
+
+  const selectDoctor = (currentDoctor) => {
+    console.log(currentDoctor)
+    setSelDoc(currentDoctor);
+    if (currentDoctor.notiToken) {
+      console.log('notification sent');
+      sendNotification(currentDoctor.notiToken);
+    }
+  }
 
 
   return (
@@ -54,7 +84,7 @@ const View = () => {
                     className="border mx-1 rounded-2"
                     target="_blank"
                     data-type="image"
-                    
+
                   >
                     <img
                       width={60}
@@ -77,7 +107,7 @@ const View = () => {
                       src="https://mdbcdn.b-cdn.net/img/bootstrap-ecommerce/items/detail1/big2.webp"
                     />
                   </a>
-                  
+
                   <a
                     data-fslightbox="mygalley"
                     className="border mx-1 rounded-2"
@@ -92,7 +122,7 @@ const View = () => {
                       src="https://mdbcdn.b-cdn.net/img/bootstrap-ecommerce/items/detail1/big4.webp"
                     />
                   </a>
-                  
+
                 </div>
                 {/* thumbs-wrap.// */}
                 {/* gallery-wrap .end// */}
@@ -125,11 +155,26 @@ const View = () => {
                     Description: {doctors.desc}
                   </p>
                   <hr />
-                 
-                  <a href="#" className="btn btn-warning shadow-0">
-                    {" "}
-                    BOOK YOUR{" "}
-                  </a>
+                  <div className="row mb-4">
+                    <div className="col-md-4 col-6">
+                      <label className="mb-2">Size</label>
+                      <select
+                        className="form-select border border-secondary"
+                        style={{ height: 35 }}
+                      >
+                        <option>Small</option>
+                        <option>Medium</option>
+                        <option>Large</option>
+                      </select>
+                    </div>
+                    {/* col.// */}
+
+
+                  </div>
+                  <button onClick={() => 
+                    selectDoctor(doctors)}>
+                    Send Notification
+                  </button>
 
                   <a
                     href="#"
