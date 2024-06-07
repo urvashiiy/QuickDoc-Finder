@@ -3,6 +3,7 @@ import { useFormik } from 'formik';
 import { enqueueSnackbar } from 'notistack';
 import "../components/DocLogin.css"
 
+
 const DoctorLogin = () => {
 
   const DoctorLoginForm = useFormik({
@@ -37,7 +38,7 @@ const DoctorLogin = () => {
           }
 
         });
-        navigate('/')
+        navigate('/ProfileCard')
       } else {
         enqueueSnackbar('Incorrect Password or Username', {
           variant: 'error', anchorOrigin: {

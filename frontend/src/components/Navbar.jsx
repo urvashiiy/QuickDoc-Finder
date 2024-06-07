@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 
 const Navbar = () => {
@@ -48,23 +50,15 @@ const Navbar = () => {
                   Dropdown
                 </a>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><Link className="dropdown-item" href="#">User</Link></li>
-                  <li><Link className="dropdown-item" href="#">Another action</Link></li>
-                  <li>
-                    <Link class="dropdown-item" href="#"> Submenu &raquo; </Link>
-                    <ul class="dropdown-menu dropdown-submenu dropright ">
-                      <li>
-                        <Link class="dropdown-item" href="#">Submenu item 1</Link>
-                      </li>
-                      <li>
-                        <Link class="dropdown-item" href="#">Submenu item 2</Link>
-                      </li>
-                      <li>
-                        <Link class="dropdown-item" href="#">Submenu item 4</Link>
-                      </li>
-                      <li>
-                        <Link class="dropdown-item" href="#">Submenu item 5</Link>
-                      </li>
+                  <li><Link className="dropdown-item" to="/SecLS">User</Link></li>
+                  <li><Link className="dropdown-item" to="/DoctorLogin">Doctor</Link></li>
+                  <li className="dropdown-submenu dropright">
+                    <Link className="dropdown-item dropdown-toggle" to="#">Submenu &raquo;</Link>
+                    <ul className="dropdown-menu">
+                      <li><Link className="dropdown-item" to="#">Submenu item 1</Link></li>
+                      <li><Link className="dropdown-item" to="#">Submenu item 2</Link></li>
+                      <li><Link className="dropdown-item" to="#">Submenu item 3</Link></li>
+                      <li><Link className="dropdown-item" to="#">Submenu item 4</Link></li>
                     </ul>
                   </li>
                 </ul>

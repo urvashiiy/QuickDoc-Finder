@@ -125,22 +125,7 @@ const View = () => {
                     Description: {doctors.desc}
                   </p>
                   <hr />
-                  <div className="row mb-4">
-                    <div className="col-md-4 col-6">
-                      <label className="mb-2">Size</label>
-                      <select
-                        className="form-select border border-secondary"
-                        style={{ height: 35 }}
-                      >
-                        <option>Small</option>
-                        <option>Medium</option>
-                        <option>Large</option>
-                      </select>
-                    </div>
-                    {/* col.// */}
-
-
-                  </div>
+                 
                   <a href="#" className="btn btn-warning shadow-0">
                     {" "}
                     BOOK YOUR{" "}
