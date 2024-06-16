@@ -1,13 +1,17 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
-
+import Sidebar from './Sidebar'
 
 const Admin = () => {
   return (
-    <div>
-       
-        <Outlet/>
-    </div>
+    <>
+    <Sidebar>
+      <div style={{ marginLeft: "100px" }}>
+        <Outlet />
+      </div>
+      </Sidebar>
+      
+  </>
   )
 }
 

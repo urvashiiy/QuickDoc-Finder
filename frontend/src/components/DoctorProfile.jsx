@@ -82,7 +82,7 @@ const DoctorProfile = () => {
 
 
   const locationCard = () => {
-    return <div className='card'>
+    return <div className='card-prodoc'>
       <div className="card-body">
         {
           currentDoctor.latitude && currentDoctor.longitude ? (
@@ -188,16 +188,16 @@ const DoctorProfile = () => {
             <div className="row gutters-sm">
               <div className="col-md-4 mb-3">
                 <div className="card-profile">
-                  <div className="card-body1">
+                  <div className="card-body12">
                     <div className="d-flex flex-column align-items-center text-center">
-                    <img
-                      src={'http://localhost:3000/' + currentDoctor.image}
-                      alt="Doctor"
-                      className="rounded-circle"
-                      width={150}
-                    />
+                      <img
+                        src={'http://localhost:3000/' + currentDoctor.image}
+                        alt="Doctor"
+                        className=""
+                        width={150}
+                      />
                       <label
-                        className="btn btn-outline-secondary w-100 mt-3"
+                        className="btn btn-outline-secondary w-50 mt-3"
                         htmlFor="upload-image"
                       >
                         {" "}
@@ -205,8 +205,8 @@ const DoctorProfile = () => {
                       </label>
                       <input
                         type="file"
-                        className='rounded-circle'
-                        width={150}
+                        className=''
+                        width={50}
                         hidden
                         onChange={uploadProfileImage}
                         id="upload-image"
@@ -224,52 +224,52 @@ const DoctorProfile = () => {
                   </div>
                 </div>
 
-               
-                  <div className="card mt-3 p-5">
-                    <h1 className='fs-2 text-center'>Introduction</h1>
-                    <textarea className='fs-3 mt-3 text-center form-control' type="text"
-                      id="desc"
-                      onChange={userForm.handleChange}
-                      value={userForm.values.desc} />
-                  </div>
-            
+
+                <div className="card mt-3 p-5">
+                  <h1 className='fs-2 text-center'>Introduction</h1>
+                  <textarea className='fs-3 mt-3 text-center form-control' type="text"
+                    id="desc"
+                    onChange={userForm.handleChange}
+                    value={userForm.values.desc} />
+                </div>
+
 
               </div>
               <div className="col-md-8">
-                <div className="card mb-3 p-3">
+                <div className="card-RI mb-3 p-3">
                   <div className="card-body">
 
-                      <div className="row">
-                        <div className="col-sm-3">
-                          <h6 className="mb-0 fs-3">Full Name</h6>
-                        </div>
-                        <input className="col-sm-9 text-secondary fs-3 form-control" type="text"
-                          id="name"
-                          onChange={userForm.handleChange}
-                          value={userForm.values.name} />
+                    <div className="row">
+                      <div className="col-sm-3">
+                        <h6 className="mb-0 fs-3">Full Name</h6>
                       </div>
-                      <hr />
-                      <div className="row">
-                        <div className="col-sm-3">
-                          <h6 className="mb-0 fs-3">Email</h6>
-                        </div>
-                        <input className="col-sm-9 text-secondary fs-3 form-control" type="email"
-                          id="email"
-                          onChange={userForm.handleChange}
-                          value={userForm.values.email}
-                        />
+                      <input className="col-sm-9 text-secondary fs-3 form-control" type="text"
+                        id="name"
+                        onChange={userForm.handleChange}
+                        value={userForm.values.name} />
+                    </div>
+                    <hr />
+                    <div className="row">
+                      <div className="col-sm-3">
+                        <h6 className="mb-0 fs-3">Email</h6>
                       </div>
-                      <hr />
-                      <div className="row">
-                        <div className="col-sm-3">
-                          <h6 className="mb-0 fs-3">Phone</h6>
-                        </div>
-                        <input className="col-sm-9 text-secondary fs-3 form-control" type="number"
-                          id="contact"
-                          onChange={userForm.handleChange}
-                          value={userForm.values.contact}
-                        />
+                      <input className="col-sm-9 text-secondary fs-3 form-control" type="email"
+                        id="email"
+                        onChange={userForm.handleChange}
+                        value={userForm.values.email}
+                      />
+                    </div>
+                    <hr />
+                    <div className="row">
+                      <div className="col-sm-3">
+                        <h6 className="mb-0 fs-3">Phone</h6>
                       </div>
+                      <input className="col-sm-9 text-secondary fs-3 form-control" type="number"
+                        id="contact"
+                        onChange={userForm.handleChange}
+                        value={userForm.values.contact}
+                      />
+                    </div>
 
 
                     <hr />
@@ -279,40 +279,41 @@ const DoctorProfile = () => {
                 </div>
                 <div className="row gutters-sm">
                   <div className="col-sm-6 mb-3">
-                    <div className="card h-100">
-                    <img
-                      src={'http://localhost:3000/' + currentDoctor.cer1}
-                      alt="Doctor"
-                      className="rounded-circle"
-                      width={150}
-                    />
-            
-                        <input
-                          type="file"
-                          id="cer1"
-                          className="form-control mb-4"
-                          placeholder="Upload Image"
-                          onChange={uploadDegreeImage} />
-            
+                    <div className="card h-100 ">
+                      <img
+                        src={'http://localhost:3000/' + currentDoctor.cer1}
+                        alt="Doctor"
+                        className=""
+                        width={370}
+
+                      />
+
+                      <input
+                        type="file"
+                        id="cer1"
+                        className="form-control mb-4"
+                        placeholder="Upload Image"
+                        onChange={uploadDegreeImage} />
+
                     </div>
                   </div>
                   <div className="col-sm-6 mb-3">
                     <div className="card h-100">
-                      <div className="card-body">
-                      <img
-                      src={'http://localhost:3000/' + currentDoctor.cer2}
-                      alt="Doctor"
-                      className="rounded-circle"
-                      width={150}
-                    />
-                       
-                          <input
-                            type="file"
-                            id="cer2"
-                            className="form-control mb-4"
-                            placeholder="Upload Image"
-                            onChange={uploadCertificateImage} />
-                   
+                      <div className="card-bodydoc">
+                        <img
+                          src={'http://localhost:3000/' + currentDoctor.cer2}
+                          alt="Doctor"
+                          className=""
+                          width={370}
+                        />
+
+                        <input
+                          type="file"
+                          id="cer2"
+                          className="form-control mb-4"
+                          placeholder="Upload Image"
+                          onChange={uploadCertificateImage} />
+
                       </div>
                     </div>
                   </div>

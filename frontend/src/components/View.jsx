@@ -104,24 +104,11 @@ const View = () => {
                       width={60}
                       height={60}
                       className="rounded-2"
-                      src="https://mdbcdn.b-cdn.net/img/bootstrap-ecommerce/items/detail1/big2.webp"
-                    />
+                      src={`http://localhost:3000/${doctors.cer2}`}
+                      />                  
                   </a>
 
-                  <a
-                    data-fslightbox="mygalley"
-                    className="border mx-1 rounded-2"
-                    target="_blank"
-                    data-type="image"
-                    href="https://mdbcdn.b-cdn.net/img/bootstrap-ecommerce/items/detail1/big4.webp"
-                  >
-                    <img
-                      width={60}
-                      height={60}
-                      className="rounded-2"
-                      src="https://mdbcdn.b-cdn.net/img/bootstrap-ecommerce/items/detail1/big4.webp"
-                    />
-                  </a>
+                  
 
                 </div>
                 {/* thumbs-wrap.// */}

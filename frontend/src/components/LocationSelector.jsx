@@ -60,7 +60,7 @@ const LocationSelector = () => {
 
     return (
         <div>
-            <div className="d-flex">
+            <div className="d-flex turu">
                 <button onClick={getCurrentLocation} className='btn btn-primary w-100' >
                     <IconCurrentLocation size={30} /> Current Location
                 </button>
