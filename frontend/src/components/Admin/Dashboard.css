@@ -1,122 +1,36 @@
-/* Sidebar container */
-.nav__cont {
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  margin: 10px;
-  
-  top: 0%;
-  height: 100%;
-  z-index: 2;
-  background-color: #202020;
-  overflow: auto;
-  transition: width 0.3s ease;
-  cursor: pointer;
-  box-shadow: 4px 7px 10px rgba(0, 0, 0, 0.4);
-}
 
-.nav__cont:hover {
-  width: 200px;
-}
-
-@media screen and (min-width: 600px) {
-  .nav__cont {
-    width: 80px;
+.kv1{
+    color: rgb(26, 24, 24);
+    
   }
-}
-
-.nav {
-  list-style-type: none;
-  color: white;
-}
-
-.nav:first-child {
-  padding-top: 1.5rem;
-}
-
-.nav__items {
-  padding-bottom: 4rem;
-  font-family: 'Roboto';
-}
-
-.nav__items a {
-  position: relative;
-  display: block;
-  top: -35px;
-  padding-left: 25px;
-  padding-right: 15px;
-  transition: all 0.3s ease;
-  margin-left: 25px;
-  margin-right: 10px;
-  text-decoration: none;
-  color: white;
-  font-family: 'Roboto';
-  font-weight: 100;
-  font-size: 1.35em;
-}
-
-.nav__items a:after {
-  content: '';
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: 2px;
-  background: radial-gradient(circle at 94.02% 88.03%, #54a4ff, transparent 100%);
-  opacity: 0;
-  transition: all 0.5s ease;
-  z-index: -10;
-}
-
-.nav__items:hover a:after {
-  opacity: 1;
-}
-
-.nav__items svg {
-  width: 2px;
-  height: 20px;
-  position: relative;
-  left: -25px;
-  cursor: pointer;
-}
-
-@media screen and (min-width: 600px) {
-  .nav__items svg {
-    width: 25px;
-    height: 20px;
-    left: -25;
-    /* margin: 10%; */
-    margin-left: 25%;
-    margin-bottom: 10%;
+  .kv1 h1{
+    font-size: 70px;
   }
-}
-
-/* Body and dashboard styles */
-html, body {
-  height: 100%;
-  margin: 0;
-}
-
-.body-ds {
+  .kv2 img{
+    max-width: 100%;
+    max-height: 100%;
+    padding-right: 400px;
+    margin: 10px;
+  }
+  /* .column98{
+    padding: auto;
+    margin: 15px;
+  } */
   
- width: 110%;
-  height: 100%;
-  background: radial-gradient(circle at 94.02% 88.03%, #54a4ff, transparent 100%),
-              radial-gradient(circle at 25.99% 27.79%, #ff94fb, transparent 100%),
-              radial-gradient(circle at 50% 50%, #000000, #000000 100%);
-}
-
-
-.dashbo {
-padding: 12.5%;
-  margin-left: 5%;
-  text-align: center;
-  font-family: 'Roboto';
-  font-weight: 0;
-  font-size: 8rem;
-  text-transform: uppercase;
-  color: white;
-  letter-spacing: 6px;
-  text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
-}
+  .src1{
+    background-image: url(https://img.freepik.com/free-photo/blur-hospital_74190-4934.jpg?t=st=1716300134~exp=1716303734~hmac=7f18c9da225610062b8ea0ab5d3f576c593745fe45372f415ee3731e117220ac&w=2000);
+    height: 96vh;
+    background-size: cover;
+    /* width:1500px; */
+    margin-left: -100px;
+  
+    
+  }
+  .container2{
+    position: absolute;
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }

@@ -38,42 +38,224 @@ const Home = () => {
       </section>
 
       {/* About */}
-      <div class="section-4 m-5 mr-5">
+      <div class="section-4 m-5 ">
         <div class="container-fluid p-2">
-          <div class="row ">
+          <div class="row">
             <div class="col-md-6">
-            <img src={"./src/assets/about.png"} alt="" />
+              <img src={"./src/assets/about.png"} alt="" />
             </div>
             <div className="col-lg-5 col-md-12">
-            <div className="section-tittle mb-40">
-            <h2 className='mt-5'>About Us</h2>
-          </div>
-        <div className="about-captiomb-50">
-          {/* Section Tittle */}
-          
-          <div className="section-tittle mb-35">
-            <h2 className='mt-5 mb-5'>Create a healthy life you love!</h2>
-          </div>
-          <p className="pera-top mb-40">
-            Almost before we knew it, we had left the ground
-          </p>
-          <p className="pera-bottom mb-30">
-            Praesent porttitor, nulla vitae posuere iaculis, arcu nisl dignissim
-            dolor, a pretium mi sem ut ipsum. Fusce fermentum. Pellentesque
-            libero tortor, tincidunt et.
-          </p>
-          <div className="icon-about">
-            <img src={"./src/assets/icon/about1.svg"} alt="" className=" mr-20" />
-            <img src={"./src/assets/icon/about2.svg"} alt="" />
-          </div>
-        </div>
-      </div>
+              <div className="section-tittle mb-40">
+                <h2 className=' heading-1 mt-5'>About Us</h2>
+              </div>
+              <div className="about-captiomb-50">
+                {/* Section Tittle */}
+
+                <div className="section-tittle mb-35">
+                  <h2 className=' para-1 mt-5 mb-5'>Create a healthy life you love!</h2>
+                </div>
+                <p className=" para-1 para-top mb-40">
+                  Almost before we knew it, we had left the ground
+                </p>
+                <p className="para-1 para-bottom mb-30">
+                  Praesent porttitor, nulla vitae posuere iaculis, arcu nisl dignissim
+                  dolor, a pretium mi sem ut ipsum. Fusce fermentum. Pellentesque
+                  libero tortor, tincidunt et.
+                </p>
+                <div className="icon-about">
+                  <img src={"./src/assets/icon/about1.svg"} alt="" className=" mr-20" />
+                  <img src={"./src/assets/icon/about2.svg"} alt="" />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Our Doct */}
-      
+
+      <div className="container-dico boyd">   
+        <div className="row m-5">
+        <h2 className='heading-2 mt-5 mb-5'>Our Doctors</h2>
+          <div className="col-12 col-sm-6 col-md-4 col-lg-3"> 
+            <div className="our-team">
+              <div className="picture">
+                <img
+                  className="img-fluid"
+                  src={"./src/assets/doctor3.jpg"}
+                />
+              </div>
+              <div className="team-content">
+                <h3 className="name">Michele Miller</h3>
+                <h4 className="title">Orthopedic</h4>
+              </div>
+              <ul className="social-dico">
+                <li>
+                  <a
+                    href="https://codepen.io/collection/XdWJOQ/"
+                    className="fa fa-facebook"
+                    aria-hidden="true"
+                  />
+                </li>
+                <li>
+                  <a
+                    href="https://codepen.io/collection/XdWJOQ/"
+                    className="fa fa-twitter"
+                    aria-hidden="true"
+                  />
+                </li>
+                <li>
+                  <a
+                    href="https://codepen.io/collection/XdWJOQ/"
+                    className="fa fa-google-plus"
+                    aria-hidden="true"
+                  />
+                </li>
+                <li>
+                  <a
+                    href="https://codepen.io/collection/XdWJOQ/"
+                    className="fa fa-linkedin"
+                    aria-hidden="true"
+                  />
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div className="our-team">
+              <div className="picture">
+                <img
+                  className="img-fluid"
+                  src={"./src/assets/Doctor1.jpg"}
+                />
+              </div>
+              <div className="team-content">
+                <h3 className="name">Patricia Knott</h3>
+                <h4 className="title">Cardiologist</h4>
+              </div>
+              <ul className="social-dico">
+                <li>
+                  <a
+                    href="https://codepen.io/collection/XdWJOQ/"
+                    className="fa fa-facebook"
+                    aria-hidden="true"
+                  />
+                </li>
+                <li>
+                  <a
+                    href="https://codepen.io/collection/XdWJOQ/"
+                    className="fa fa-twitter"
+                    aria-hidden="true"
+                  />
+                </li>
+                <li>
+                  <a
+                    href="https://codepen.io/collection/XdWJOQ/"
+                    className="fa fa-google-plus"
+                    aria-hidden="true"
+                  />
+                </li>
+                <li>
+                  <a
+                    href="https://codepen.io/collection/XdWJOQ/"
+                    className="fa fa-linkedin"
+                    aria-hidden="true"
+                  />
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div className="our-team">
+              <div className="picture">
+                <img
+                  className="img-fluid"
+                  src={"./src/assets/doctor6.jpg"}
+                />
+              </div>
+              <div className="team-content">
+                <h3 className="name">Justin Ramos</h3>
+                <h4 className="title">Neurologist</h4>
+              </div>
+              <ul className="social-dico">
+                <li>
+                  <a
+                    href="https://codepen.io/collection/XdWJOQ/"
+                    className="fa fa-facebook"
+                    aria-hidden="true"
+                  />
+                </li>
+                <li>
+                  <a
+                    href="https://codepen.io/collection/XdWJOQ/"
+                    className="fa fa-twitter"
+                    aria-hidden="true"
+                  />
+                </li>
+                <li>
+                  <a
+                    href="https://codepen.io/collection/XdWJOQ/"
+                    className="fa fa-google-plus"
+                    aria-hidden="true"
+                  />
+                </li>
+                <li>
+                  <a
+                    href="https://codepen.io/collection/XdWJOQ/"
+                    className="fa fa-linkedin"
+                    aria-hidden="true"
+                  />
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div className="our-team">
+              <div className="picture">
+                <img
+                  className="img-fluid"
+                  src={"./src/assets/doctor7.jpg"}
+                />
+              </div>
+              <div className="team-content">
+                <h3 className="name">Mary Huntley</h3>
+                <h4 className="title">gynecologists</h4>
+              </div>
+              <ul className="social-dico">
+                <li>
+                  <a
+                    href="https://codepen.io/collection/XdWJOQ/"
+                    className="fa fa-facebook"
+                    aria-hidden="true"
+                  />
+                </li>
+                <li>
+                  <a
+                    href="https://codepen.io/collection/XdWJOQ/"
+                    className="fa fa-twitter"
+                    aria-hidden="true"
+                  />
+                </li>
+                <li>
+                  <a
+                    href="https://codepen.io/collection/XdWJOQ/"
+                    className="fa fa-google-plus"
+                    aria-hidden="true"
+                  />
+                </li>
+                <li>
+                  <a
+                    href="https://codepen.io/collection/XdWJOQ/"
+                    className="fa fa-linkedin"
+                    aria-hidden="true"
+                  />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
 
       {/* Our service */}
 
@@ -101,7 +283,7 @@ const Home = () => {
                   <div className="depertment_content">
                     <div className="row justify-content-center">
                       <div className="col-xl-8">
-                        <h2 style={{ color: '#129e95' }}>Our Department</h2>
+                        <h2 style={{ color: '#168548' }}> Our Facilities</h2>
                         <div className="row">
                           <div className="col-lg-6 col-sm-6">
                             <div className="single_our_depertment">
@@ -167,26 +349,8 @@ const Home = () => {
       </>
 
 
-      < >
 
-        <meta charSet="UTF-8" />
-        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Animation 1</title>
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-          integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-          crossOrigin="anonymous"
-          referrerPolicy="no-referrer"
-        />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
-          rel="stylesheet"
-        />
-        <link rel="stylesheet" href="/section1/Style.css" />
+      <>
         <footer className='bodyfoot'>
           <div className="background">
             <svg
@@ -197,7 +361,7 @@ const Home = () => {
               y="0px"
               width="50%"
               height="50%"
-              viewBox="0 0 1600 900"
+              viewBox="0 0 1400 900"
             >
               <defs>
                 <path
@@ -284,9 +448,9 @@ s371.981,38.998,575.971,0s293.985-39.278,505.474,5.859s493.475,48.368,716.963-4.
         </footer>
 
       </>
-
-
     </>
+  
+
     </div>
   )
 }

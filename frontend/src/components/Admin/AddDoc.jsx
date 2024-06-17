@@ -149,7 +149,7 @@ const AddDoctor = () => {
             </div>
 
             <div className="form-outline">
-
+            <label htmlFor="Name">Email:</label>
               <input style={{ fontFamily: "cursive" }}
                 type="email"
                 className="form-control shadow input mb-4"
@@ -160,7 +160,7 @@ const AddDoctor = () => {
 
             </div>
             <div className="form-outline">
-
+            <label htmlFor="Name">Contact:</label>
               <input style={{ fontFamily: "cursive" }}
                 type="number"
                 className="form-control shadow input mb-4"
@@ -171,7 +171,7 @@ const AddDoctor = () => {
 
             </div>
             <div className="form-outline">
-
+            <label htmlFor="Name">Password</label>
               <input
                 type="password" style={{ fontFamily: "cursive" }}
                 className="form-control shadow input mb-4"
@@ -182,7 +182,7 @@ const AddDoctor = () => {
             </div>
 
             <div className="form-outline">
-
+            <label htmlFor="Name">Experience:</label>
               <input
                 type="number" style={{ fontFamily: "cursive" }}
                 className="form-control shadow input mb-4"
@@ -193,7 +193,7 @@ const AddDoctor = () => {
             </div>
 
             <div className="form-outline">
-
+            <label htmlFor="Name">Description:</label>
               <input
                 type="desc" style={{ fontFamily: "cursive" }}
                 className="form-control shadow input mb-4"
@@ -205,7 +205,7 @@ const AddDoctor = () => {
 
 
             <div className="form-outline">
-
+            <label htmlFor="Name">Latitude:</label>
               <input style={{ fontFamily: "cursive" }}
                 type="number"
                 className="form-control shadow input mb-4"
@@ -216,7 +216,7 @@ const AddDoctor = () => {
 
             </div>
             <div className="form-outline">
-
+            <label htmlFor="Name">Longtitude:</label>
               <input style={{ fontFamily: "cursive" }}
                 type="number"
                 className="form-control shadow input mb-4"
@@ -227,7 +227,7 @@ const AddDoctor = () => {
 
             </div>
             <div className="form-outline">
-
+            <label htmlFor="Name">Speciality:</label>
               <input style={{ fontFamily: "cursive" }}
                 type="text"
                 className="form-control shadow input mb-4"

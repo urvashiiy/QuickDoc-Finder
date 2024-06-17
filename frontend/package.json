@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
-    "@tabler/icons-react": "^3.3.0",
+    "@tabler/icons-react": "^3.5.0",
     "bootstrap": "^5.3.3",
     "firebase": "^10.11.1",
     "formik": "^2.4.5",
@@ -20,17 +20,21 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-leaflet": "^4.2.1",
-    "react-router-dom": "^6.22.3",
+    "react-pro-sidebar": "^1.1.0",
+    "react-router-dom": "^6.23.1",
+    "react-typed": "^2.0.12",
     "yup": "^1.4.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "@vitejs/plugin-react": "^4.2.1",
+    "css-loader": "^7.1.2",
     "eslint": "^8.57.0",
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
+    "style-loader": "^4.0.0",
     "vite": "^5.2.11"
   }
 }
