@@ -82,7 +82,7 @@ const Location = () => {
                                             <Popup>
                                                 <h2>{doctor.name}</h2>
                                                 <h4 className='mt-3'>{doctor.speciality}</h4>
-                                                <Link to={'/main/DocProfile/' + doctor._id} className="btn btn-outline-primary m-2">View Profile</Link>
+                                                <Link to={`/View/${doctor._id}`} className="btn btn-outline-primary m-2">View Profile</Link>
                                             </Popup>
                                         </Marker>
                                     )

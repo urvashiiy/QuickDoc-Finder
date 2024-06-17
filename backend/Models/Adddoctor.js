@@ -13,7 +13,8 @@ const {Schema,model} = require('../connection')
     cer2: {type:String},
     desc: {type: String},
     experience: String,
-    createdAt: Date,
+    notiToken: {type: String},
+    createdAt: {type : Date, default: Date.now},
    /* notiToken: {type: String, default: ''}*/
   
     });
