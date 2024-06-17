@@ -36,8 +36,8 @@ const Contact = () => {
   })
 
   return (
-    <div className='*'> 
-    <div className="contact-container">
+    <div className=''> 
+    <div className="contact-container" style={{marginTop:'150px'}}>
     <div className="contact-inner-container">
       <div className="contact-info-container">
         <h1 className="contact-heading">Contact Us</h1>

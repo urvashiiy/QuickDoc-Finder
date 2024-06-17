@@ -49,16 +49,16 @@ const Content = () => {
                 <Route path='/SecLS' element={<SecLS />} />
                 <Route path='/Contact' element={<Contact />} />
                 <Route path='/DoctorListing' element={<DoctorListing />} />
-                <Route path='/Location' element={<Location />} />
+                <Route path='/Location' element={<UserAuth><Location /></UserAuth>} />
                 <Route path='/ProfileCard' element={<Profilecard />} />
                 <Route path='/PushNotificationButton' element={<PushNotificationButton />} />
                 <Route path='/DoctorLogin' element={<DoctorLogin />} />
                 <Route path='/ForgetPassword' element={<ForgetPassword />} />
-                <Route path='/View/:id' element={ <View />}/>
+                <Route path='/View/:id' element={<UserAuth> <View /></UserAuth>}/>
                 <Route path='/DoctorProfile' element={<DoctorProfile />} />
                 
 
-                <Route path='admin' element={<Admin/>  }>
+                <Route path='admin' element={<AdminAuth><Admin/></AdminAuth>  }>
                     <Route path='AddDoc' element={<AddDoctor />} />
                     <Route path='ManageDoctor' element={<ManageDoctor />} />
                     <Route path='ManageUser' element={<ManageUser />} />

@@ -1,5 +1,6 @@
 import React from 'react'
 import './Dashboard.css';
+import { ReactTyped } from "react-typed";
 
 const Dashboard = () =>  {
   return (
