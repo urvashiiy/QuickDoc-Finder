@@ -34,3 +34,5 @@ if ('serviceWorker' in navigator) {
       
         event.notification.close();
       });
+
+      

@@ -105,19 +105,16 @@ const Sidebar = ({children}) => {
               <div
                 className="nav_link submenu_item"
                 onClick={() => handleSubmenuClick(0)}
-              >
+              > 
                 <span className="navlink_icon">
                   <i className="bx bx-home-alt" />
                 </span>
-                <span className="navlink">Home</span>
-                <i className="bx bx-chevron-right arrow-left" />
+                
+                <Link to="/Admin/Dashboard" className="nav_link"><span className="navlink"> Home</span>
+                <i className="bx bx-chevron-right" />
+                </Link>
               </div>
-              <ul className={`menu_items submenu ${activeSubmenu === 0 ? 'show_submenu' : ''}`}>
-                <a href="#" className="nav_link sublink">Nav Sub Link</a>
-                <a href="#" className="nav_link sublink">Nav Sub Link</a>
-                <a href="#" className="nav_link sublink">Nav Sub Link</a>
-                <a href="#" className="nav_link sublink">Nav Sub Link</a>
-              </ul>
+              
             </li>
             
           </ul>
@@ -137,24 +134,24 @@ const Sidebar = ({children}) => {
                 <span className="navlink_icon">
                   <i className="bx bx-loader-circle" />
                 </span>
-                <span className="navlink">Filters</span>
+                <span className="navlink">Manage Doctor</span>
               </Link>
             </li>
             <li className="item">
-              <a href="#" className="nav_link">
+              <Link to="/Admin/AddDoc" className="nav_link">
                 <span className="navlink_icon">
                   <i className="bx bx-filter" />
                 </span>
-                <span className="navlink">Filter</span>
-              </a>
+                <span className="navlink">Add Doctor</span>
+              </Link>
             </li>
             <li className="item">
-              <a href="#" className="nav_link">
+              <Link to="/Admin/AddDoc" className="nav_link">
                 <span className="navlink_icon">
                   <i className="bx bx-cloud-upload" />
                 </span>
                 <span className="navlink">Upload new</span>
-              </a>
+              </Link>
             </li>
           </ul>
 
