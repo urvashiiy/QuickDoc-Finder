@@ -1,28 +1,10 @@
 
-.kv1{
-    color: rgb(26, 24, 24);
-    
-  }
-  .kv1 h1{
-    font-size: 70px;
-  }
-  .kv2 img{
-    max-width: 100%;
-    max-height: 100%;
-    padding-right: 400px;
-    margin: 10px;
-  }
-  /* .column98{
-    padding: auto;
-    margin: 15px;
-  } */
-  
   .src1{
-    background-image: url(https://img.freepik.com/free-photo/blur-hospital_74190-4934.jpg?t=st=1716300134~exp=1716303734~hmac=7f18c9da225610062b8ea0ab5d3f576c593745fe45372f415ee3731e117220ac&w=2000);
-    height: 96vh;
+    background-image: url(https://t3.ftcdn.net/jpg/00/92/34/56/360_F_92345619_pUlEznFdreTJy5amSBspNNtQT0sqhTwM.jpg);
+    height: 100vh;
     background-size: cover;
-    /* width:1500px; */
-    margin-left: -100px;
+    width:150%; 
+    margin-left: -150px;
   
     
   }
