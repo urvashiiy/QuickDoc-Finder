@@ -2,6 +2,26 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const Home = () => {
+  const [showDisclaimer, setShowDisclaimer] = useState(false);
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      setShowDisclaimer(true);
+      enqueueSnackbar(`Please note that the selection of doctors is at the user's discretion. We are not responsible for any issues that arise from the chosen medical services.`, {
+        variant: 'info',
+        anchorOrigin: {
+          vertical: 'bottom',
+          horizontal: 'center',
+        },
+        autoHideDuration: 6000, // 6 seconds
+        contentStyle: {
+          fontSize: '30px !important', // Adjust font size as needed
+        },
+      });
+    }, 5000); // 30 seconds in milliseconds
+
+    return () => clearTimeout(timeoutId); // Cleanup function to clear timeout on unmount
+  }, []);
   return (
     <div><>
 
@@ -74,10 +94,10 @@ const Home = () => {
 
       {/* Our Doct */}
 
-      <div className="container-dico boyd">   
+      <div className="container-dico boyd">
         <div className="row m-5">
-        <h2 className='heading-2 mt-5 mb-5'>Our Doctors</h2>
-          <div className="col-12 col-sm-6 col-md-4 col-lg-3"> 
+          <h2 className='heading-2 mt-5 mb-5'>Our Doctors</h2>
+          <div className="col-12 col-sm-6 col-md-4 col-lg-3">
             <div className="our-team">
               <div className="picture">
                 <img
@@ -449,7 +469,7 @@ s371.981,38.998,575.971,0s293.985-39.278,505.474,5.859s493.475,48.368,716.963-4.
 
       </>
     </>
-  
+
 
     </div>
   )
